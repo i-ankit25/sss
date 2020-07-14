@@ -1,5 +1,5 @@
 from django.conf.urls import url
 from . import views
-app_name = 'library'
+app_name = 'SmartstudySquare'
 urlpatterns = [
     url(r'^$', views.index, name='index')]
