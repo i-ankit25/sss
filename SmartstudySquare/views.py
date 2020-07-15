@@ -14,9 +14,11 @@ def index(request):
             con.ehlo()
             con.login('smartstudysquare@gmail.com', 'avin_9blue')
             con.sendmail('smartstudysquare@gmail.com', 'smartstudysquare@gmail.com',
-                         "Subject:Query received\n\n Name :- "+name+"\n MobileNo :- "+str(mobileno)+"\n Message :-"+message)
-            return render(request, 'SmartstudySquare/index.html', {})
+                         "Subject:Query received\n\n Name :- "+name+"\n MobileNo :- "+str(mobileno)+"\n Message :- "+message)
+            con.close()
+            return render(request, 'SmartstudySquare/index.html', {'alert_flag1': True, 'alert_flag2': True})
+
         except:
-            return render(request, 'SmartstudySquare/index.html', {})
+            return render(request, 'SmartstudySquare/index.html', {'alert_flag1': True, 'alert_flag2': False})
     else:
-        return render(request, 'SmartstudySquare/index.html', {})
+        return render(request, 'SmartstudySquare/index.html', {'alert_flag1': False, 'alert_flag2': False})

@@ -25,10 +25,17 @@
         <script src="static/SmartstudySquare/js/respond.min.js"></script>
         <script type="text/javascript" src="static/SmartstudySquare/js/selectivizr.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
     <!-- Preloader -->
+    {%  if alert_flag1  and alert_flag2  %}
+    <script>alert("Message sent successfully. We will reply to you shortly." )</script>
+    {% elif alert_flag1 and  not alert_flag2  %}
+     <script>alert("Message not sent. Please whatsapp your query at +91 94713 53074")</script>
+    {% else %}
+    {% endif%}
     <div class="preloader">
         <div class="status"></div>
     </div>
@@ -429,6 +436,8 @@ We focus on finding a learning style which works for them. This helps them to de
                     </div>
 
                 </div>
+            </div>
+            </div>
                 <!-- Portfolio Items End -->
  
                 
@@ -473,14 +482,15 @@ We focus on finding a learning style which works for them. This helps them to de
     </div> 	
     
     <div class="col-md-12">
-    <textarea rows="10" cols="100" class="form-control" 
+    <textarea rows="10" cols="100" class="form-control"
     placeholder="Message" id="message" name="message" required
     data-validation-required-message="Please enter your message" minlength="5"
     data-validation-minlength-message="Min 5 characters"
-    maxlength="999" style="resize:none"></textarea>
+              maxlength="999" style="resize:none"></textarea></div>
 
 <div class="col-md-4 col-md-offset-5"><br><div id="success"> </div><button type="submit" class="btn btn-primary">Submit Message</button></div> 
 </form>
+        </div>
 </div>
 
 </div>
@@ -502,7 +512,7 @@ We focus on finding a learning style which works for them. This helps them to de
                     <p>New batches starting soon. Contact us for more details.</p>
                     </div>
                 </div>
-                <div class="col-md-4 contac-us">
+                <div class="col-md-4 contact-us">
                     <h4>Contact Us</h4>
 					<ul>
                             <li><a href="https://g.page/SmartstudySquare?share"><i class="fa fa-home"></i></a>New kishore gunj road no 6, road, Harmu, Ranchi, Jharkhand 834001</li>
@@ -543,7 +553,11 @@ We focus on finding a learning style which works for them. This helps them to de
         </div>
     </footer>
     <!-- Footer End -->
-
+    <script>
+    if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+    }
+</script>
 	<script src="static/SmartstudySquare/js/jquery-1.11.3.min.js"></script>
 	<script src="static/SmartstudySquare/js/bootstrap.min.js"></script>
 	<script src="static/SmartstudySquare/js/modernizr.min.js"></script>
