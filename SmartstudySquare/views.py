@@ -2,8 +2,8 @@ from django.shortcuts import render
 import smtplib
 import ssl
 
-def index(request):
 
+def index(request):
     if request.method == "POST":
         try:
             name = request.POST.get("name")
@@ -18,7 +18,7 @@ def index(request):
             con.close()
             return render(request, 'SmartstudySquare/index.html', {'alert_flag1': True, 'alert_flag2': True})
 
-        except:
+        except Exception as ex:
             return render(request, 'SmartstudySquare/index.html', {'alert_flag1': True, 'alert_flag2': False})
     else:
         return render(request, 'SmartstudySquare/index.html', {'alert_flag1': False, 'alert_flag2': False})
