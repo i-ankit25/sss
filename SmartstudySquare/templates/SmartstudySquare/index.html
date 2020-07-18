@@ -6,26 +6,25 @@
     <meta name="description" content="Businnes, Portfolio, Corporate"> 
 	<meta name="Author" content="WebThemez"> 
     <title>Smartstudy Square</title>
-     {% load static %}
-    <link rel="stylesheet" href="static/SmartstudySquare/css/normalize.css">
-    <link rel="stylesheet" href="static/SmartstudySquare/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/SmartstudySquare/css/font-awesome/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="static/SmartstudySquare/elegant_font/style.css" />
-    <!--[if lte IE 7]><script src="static/SmartstudySquare/elegant_font/lte-ie7.js"></script><![endif]-->
-    <link rel="stylesheet" href="static/SmartstudySquare/css/magnific-popup.css">
-    <link rel="stylesheet" href="static/SmartstudySquare/css/slider-pro.css">
-    <link rel="stylesheet" href="static/SmartstudySquare/css/owl.carousel.css">
-    <link rel="stylesheet" href="static/SmartstudySquare/css/owl.theme.css">
-    <link rel="stylesheet" href="static/SmartstudySquare/css/owl.transitions.css">
-    <link rel="stylesheet" href="static/SmartstudySquare/css/animate.css">
-	    <link rel="stylesheet" href="static/SmartstudySquare/elegant_font/style.css">
-    {% load static %}
+      {% load staticfiles %}
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/elegant_font/style.css" />
+    <!--[if lte IE 7]><script src="/elegant_font/lte-ie7.js"></script><![endif]-->
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/slider-pro.css">
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <link rel="stylesheet" href="/css/owl.transitions.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/elegant_font/style.css">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
 
     <!--[if lt IE 9]>
-        <script src="static/SmartstudySquare/js/html5shiv.min.js"></script>
-        <script src="static/SmartstudySquare/js/respond.min.js"></script>
-        <script type="text/javascript" src="static/SmartstudySquare/js/selectivizr.js"></script>
+        <script src="{% static '/js/html5shiv.min.js' %}"></script>
+        <script src="{% static '/js/respond.min.js' %}"></script>
+        <script type="text/javascript" src="{% static '/js/selectivizr.js' %}"></script>
     <![endif]-->
 </head>
 
@@ -50,7 +49,7 @@
         <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
             ☰
         </button> 
-		 <a class="navbar-brand page-scroll" href="#slider"><img class="logo" id="logo" src="{% static "/logo.png" %}" alt="logo"></a>
+		 <a class="navbar-brand page-scroll" href="#slider"><img class="logo" id="logo" src="{% static '/logo.png' %}" alt="logo"></a>
         <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
             <ul class="nav navbar-nav">
                  <li class="active">
@@ -89,7 +88,7 @@
             <div class="sp-slide main-slides">
                 <div class="img-overlay"></div>
 
-                <img class="sp-image" src="static/SmartstudySquare/images/slider/slider-img-1.png" alt="Slider 1"/>
+                <img class="sp-image" src="{% static '/slider-img-1.png' %}" alt="Slider 1"/>
                 <div class="caption">
 					<h1 class="sp-layer slider-text-big"
 					data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
@@ -105,7 +104,7 @@
             <!-- Slides -->
             <div class="sp-slide main-slides">
             <div class="img-overlay"></div>
-                <img class="sp-image" src="static/SmartstudySquare/images/slider/slider-img-2.jpg" alt="Slider 2"/>
+                <img class="sp-image" src="{% static '/slider-img-2.jpg' %}" alt="Slider 2"/>
                 <div class="caption">
                 <h1 class="sp-layer slider-text-big"
                 data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
@@ -124,7 +123,7 @@
             <div class="sp-slide main-slides">
                 <div class="img-overlay"></div>
 
-                <img class="sp-image" src="static/SmartstudySquare/images/slider/slider-img-3.png" alt="Slider 3"/>
+                <img class="sp-image" src="{% static '/slider-img-3.png' %}" alt="Slider 3"/>
 				<div class="caption">
                 <h1 class="sp-layer slider-text-big"
                 data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
@@ -154,7 +153,7 @@
                 <!-- Section Header End -->
 
                 <div class="col-md-6 col-sm-6 col-xs-12 custom-sec-img wow fadeInDown">
-                    <img src="static/SmartstudySquare/images/profile.png" alt="Custom Image" width=70% height=70% style="margin-left:auto; margin-right: auto">
+                    <img src="{% static '/profile.png' %}" alt="Custom Image" width=70% height=70% style="margin-left:auto; margin-right: auto">
                 </div>
 
                 <div class="col-md-6 col-sm-6 col-xs-12 customized-text wow fadeInDown black-ed">
@@ -351,7 +350,7 @@ We focus on finding a learning style which works for them. This helps them to de
 
     <input type="text" class="form-control" 
     placeholder="Full Name" id="name" name="name" required
-    data-validation-required-message="Please enter your name" />
+           data-validation-required-message="Please enter your name" />
     <p class="help-block"></p>
     </div> 	
     <div class="col-md-6">
@@ -383,7 +382,7 @@ We focus on finding a learning style which works for them. This helps them to de
         <div class="container">
             <div class="row footer-containertent">
                 <div class="col-md-4">
-                    <img src="static/SmartstudySquare/images/logo.png">
+                    <img src="{% static '/logo.png' %}">
                     <p style="color:white">Let's make future together </p>
                 </div>
                 <div class="col-md-4">
@@ -427,7 +426,7 @@ We focus on finding a learning style which works for them. This helps them to de
                         </li>
                     </ul>
 					<br/><br/>
-					<p>Copyright © 2020. Designed</a> by Ankit </p>
+					<p>Copyright © 2020. </p>
                 </div>
             </div>
         </div>
@@ -438,24 +437,24 @@ We focus on finding a learning style which works for them. This helps them to de
     window.history.replaceState( null, null, window.location.href );
     }
 </script>
-	<script src="static/SmartstudySquare/js/jquery-1.11.3.min.js"></script>
-	<script src="static/SmartstudySquare/js/bootstrap.min.js"></script>
-	<script src="static/SmartstudySquare/js/modernizr.min.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.easing.1.3.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.scrollUp.min.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.easypiechart.js"></script>
-	<script src="static/SmartstudySquare/js/isotope.pkgd.min.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.fitvids.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.stellar.min.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.waypoints.min.js"></script>
-	<script src="static/SmartstudySquare/js/wow.min.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.nav.js"></script>
-	<script src="static/SmartstudySquare/js/imagesloaded.pkgd.min.js"></script>
-	<script src="static/SmartstudySquare/js/smooth-scroll.min.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.magnific-popup.min.js"></script>
-	<script src="static/SmartstudySquare/js/jquery.sliderPro.min.js"></script>
-	<script src="static/SmartstudySquare/js/owl.carousel.min.js"></script>
-	<script src="static/SmartstudySquare/js/custom.js"></script>
+	<script src="{% static '/js/jquery-1.11.3.min.js' %}"></script>
+	<script src="{% static '/js/bootstrap.min.js' %}"></script>
+	<script src="{% static '/js/modernizr.min.js' %}"></script>
+	<script src="{% static '/js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static '/js/jquery.scrollUp.min.js'%}"></script>
+	<script src="{% static '/js/jquery.easypiechart.js'%}"></script>
+	<script src="{% static '/js/isotope.pkgd.min.js'%}"></script>
+	<script src="{% static '/js/jquery.fitvids.js'%}"></script>
+	<script src="{% static '/js/jquery.stellar.min.js'%}"></script>
+	<script src="{% static '/js/jquery.waypoints.min.js'%}"></script>
+	<script src="{% static '/js/wow.min.js'%}"></script>
+	<script src="{% static '/js/jquery.nav.js'%}"></script>
+	<script src="{% static '/js/imagesloaded.pkgd.min.js'%}"></script>
+	<script src="{% static '/js/smooth-scroll.min.js'%}"></script>
+	<script src="{% static '/js/jquery.magnific-popup.min.js'%}"></script>
+	<script src="{% static '/js/jquery.sliderPro.min.js'%}"></script>
+	<script src="{% static '/js/owl.carousel.min.js'%}"></script>
+	<script src="{% static '/js/custom.js'%}"></script>
 
 </body>
 </html>
