@@ -31,7 +31,7 @@
 .sp-slide {
 	position: absolute;
 	text-align: center;
-	background: red;
+	background: #0c0c0c;
 }
 
 .sp-image-container {
@@ -312,11 +312,11 @@
 /* Touch Swipe
 --------------------------------------------------*/
 .sp-grab {
-	cursor: url(images/openhand.cur), move;
+	cursor: url('/openhand.cur'), move;
 }
 
 .sp-grabbing {
-	cursor: url(images/closedhand.cur), move;
+	cursor: url('/closedhand.cur'), move;
 }
 
 .sp-selectable {
@@ -748,7 +748,8 @@ a.sp-video:after {
 --------------------------------------------------*/
 .slider-pro img.sp-image,
 .slider-pro img.sp-thumbnail {
-	max-width: none !important;
+	height:auto;
+	max-width: 100% !important;
 	max-height: none !important;
 	border: none !important;
 	border-radius: 0 !important;
