@@ -12,7 +12,7 @@ def index(request):
             context = ssl.create_default_context()
             con = smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context)
             con.ehlo()
-            con.login('smartstudysquare@gmail.com', 'avin_9blue')
+            con.login('smartstudysquare@gmail.com', '#####')
             con.sendmail('smartstudysquare@gmail.com', 'smartstudysquare@gmail.com',
                          "Subject:Query received\n\n Name :- "+name+"\n MobileNo :- "+str(mobileno)+"\n Message :- "+message)
             con.close()
